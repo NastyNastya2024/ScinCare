@@ -76,3 +76,78 @@ document.querySelectorAll('.feature-card, .cosmetic-card, .member-card').forEach
     observer.observe(card);
 });
 
+// Restart hero animation when section comes into view
+const heroSection = document.querySelector('.hero');
+let animationStarted = false;
+
+const heroAnimationObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !animationStarted) {
+            animationStarted = true;
+            
+            // Reset all animated elements to initial state
+            const preloader = document.querySelector('.preloader-overlay');
+            const skinStatus = document.querySelector('.skin-status-text');
+            const recommendation = document.querySelector('.recommendation-text');
+            const badges = document.querySelectorAll('.skin-badge');
+            const heroImage2 = document.querySelector('.hero-image-2');
+            
+            // Reset preloader
+            if (preloader) {
+                preloader.style.opacity = '1';
+                preloader.style.visibility = 'visible';
+                preloader.style.animation = 'none';
+                void preloader.offsetWidth;
+                preloader.style.animation = 'fadeOut 0.5s ease-out 3s forwards';
+            }
+            
+            // Reset skin status
+            if (skinStatus) {
+                skinStatus.style.opacity = '0';
+                skinStatus.style.visibility = 'visible';
+                skinStatus.style.animation = 'none';
+                void skinStatus.offsetWidth;
+                skinStatus.style.animation = 'fadeIn 0.5s ease-out 3s forwards, fadeOut 0.5s ease-out 7.5s forwards';
+            }
+            
+            // Reset recommendation
+            if (recommendation) {
+                recommendation.style.opacity = '0';
+                recommendation.style.visibility = 'visible';
+                recommendation.style.animation = 'none';
+                void recommendation.offsetWidth;
+                recommendation.style.animation = 'fadeIn 0.5s ease-out 7.5s forwards';
+            }
+            
+            // Reset badges
+            badges.forEach((badge, index) => {
+                badge.style.opacity = '0';
+                badge.style.transform = 'translateX(-20px)';
+                badge.style.visibility = 'visible';
+                badge.style.animation = 'none';
+                void badge.offsetWidth;
+                const delay = 4 + (index * 0.5);
+                badge.style.animation = `slideInBadge 0.5s ease-out ${delay}s forwards, fadeOutBadge 0.5s ease-out 7s forwards`;
+            });
+            
+            // Reset hero image 2
+            if (heroImage2) {
+                heroImage2.style.opacity = '0';
+                heroImage2.style.visibility = 'visible';
+                heroImage2.style.animation = 'none';
+                void heroImage2.offsetWidth;
+                heroImage2.style.animation = 'fadeInImage 0.5s ease-out 7.5s forwards';
+            }
+        } else if (!entry.isIntersecting) {
+            // Reset flag when section leaves viewport
+            animationStarted = false;
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+if (heroSection) {
+    heroAnimationObserver.observe(heroSection);
+}
+
