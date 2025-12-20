@@ -151,3 +151,25 @@ if (heroSection) {
     heroAnimationObserver.observe(heroSection);
 }
 
+// Screens animation on scroll
+const screensContainer = document.querySelector('.screens-container');
+if (screensContainer) {
+    const screensObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add delay before animation starts
+                setTimeout(() => {
+                    screensContainer.classList.add('scrolled');
+                }, 500);
+            } else {
+                screensContainer.classList.remove('scrolled');
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px'
+    });
+    
+    screensObserver.observe(screensContainer);
+}
+
