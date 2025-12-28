@@ -60,3 +60,7 @@ You can customize the colors by modifying CSS variables in `styles/main.css`:
 
 MIT License - see LICENSE file for details
 
+
+
+
+
