@@ -1128,48 +1128,89 @@ body {
     background: transparent;
 }
 
+.faq-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-content {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.faq-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #151581;
+    margin: 0;
+    flex-shrink: 0;
+}
+
 .faq-list {
-    max-width: 800px;
-    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
 }
 
 .faq-item {
-    border-bottom: 1px solid var(--border-color);
-    padding: 2rem 0;
-}
-
-.faq-question {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-.faq-question::after {
-    content: '+';
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #151581;
+    margin: 0;
+    flex: 1;
+    cursor: pointer;
+}
+
+.faq-icon {
     font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-.faq-item.active .faq-question::after {
-    content: '−';
+    color: #151581;
+    font-weight: 300;
+    flex-shrink: 0;
 }
 
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    display: none;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px;
+    display: block;
 }
 
 .faq-answer p {
     color: #151581;
     line-height: 1.8;
+}
+
+.faq-image {
+    width: calc(100% + 3rem);
+    margin: 1rem -1.5rem -1.5rem -1.5rem;
+}
+
+.prefooter-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 8px 8px;
+    display: block;
 }
 
 /* CTA Section */
@@ -1194,13 +1235,16 @@ body {
 
 .cta-section .btn-primary,
 .cta-section .btn-secondary {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    background: white;
+    color: #151581;
+    border: 1px solid #e5e7eb;
+    padding: 2rem 4rem;
+    font-size: 0.55rem;
 }
 
 .cta-section .btn-secondary {
-    background: transparent;
-    color: var(--primary-color);
+    background: white;
+    color: #151581;
     border-color: var(--primary-color);
 }
 
@@ -1375,20 +1419,42 @@ body {
 .slider-track {
     width: 100%;
     height: 40px;
-    background: linear-gradient(to right, #f472b6 0%, #f472b6 33%, #a78bfa 33%, #a78bfa 66%, #8b5cf6 66%, #8b5cf6 100%);
+    background: linear-gradient(to right, #fbcfe8 0%, #e9d5ff 50%, #ddd6fe 100%);
     border-radius: 20px;
     position: relative;
     margin-bottom: 0.5rem;
 }
 
+.slider-track::before,
+.slider-track::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.slider-track::before {
+    left: 33.33%;
+}
+
+.slider-track::after {
+    left: 66.66%;
+}
+
 .slider-handle {
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    right: 4px;
+    transform: translateY(-50%);
     width: 32px;
     height: 32px;
     background: white;
-    border: 3px solid #8b5cf6;
+    border: 3px solid #c4b5fd;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -1403,46 +1469,41 @@ body {
 
 .product-recommendations {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .product-card {
     flex: 1;
-    min-width: 150px;
-    max-width: 200px;
+    width: 200px;
+    aspect-ratio: 4 / 3;
     background: white;
-    border-radius: 12px;
-    padding: 1rem;
+    border-radius: 6px;
+    padding: 0.75rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-badge {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    background: #10b981;
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 12px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    z-index: 1;
+    display: none;
 }
 
 .product-image {
     width: 100%;
-    height: 120px;
+    height: 90%;
     object-fit: contain;
     margin-bottom: 0.5rem;
+    flex-grow: 1;
 }
 
 .product-card h4 {
-    font-size: 0.85rem;
+    font-size: 0.425rem;
     color: #151581;
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
     line-height: 1.3;
 }
 
