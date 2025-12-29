@@ -524,7 +524,7 @@ body {
 
 /* Description Section */
 .description-section {
-    padding: 2rem 0 0.5rem 0;
+    padding: 1rem 0;
     background: #F6F6FA;
 }
 
@@ -537,7 +537,7 @@ body {
     max-width: 800px;
     text-align: center;
     margin-top: 2rem;
-    margin-bottom: 6rem !important;
+    margin-bottom: 1.5rem !important;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 0;
@@ -577,7 +577,8 @@ body {
     border-radius: 16px;
     padding: 2rem;
     box-shadow: none;
-    margin-top: 3rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -588,7 +589,8 @@ body {
     border-radius: 16px;
     padding: 2rem;
     box-shadow: none;
-    margin-bottom: 2rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .screens-container {
@@ -674,13 +676,13 @@ body {
 
 /* Feature Sections */
 .feature-section {
-    padding: 0;
+    padding: 1rem 0;
     background: #F6F6FA;
 }
 
 .feature-section.alt {
     background: #F6F6FA;
-    padding-top: 0.5rem;
+    padding: 1rem 0;
 }
 
 .feature-number {
@@ -722,7 +724,7 @@ h1, h2, h3, h4, h5, h6,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 0.75rem;
 }
 
 .feature-card {
@@ -1264,9 +1266,9 @@ h1, h2, h3, h4, h5, h6,
     background: white;
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0.75rem auto;
     position: relative;
     z-index: 1;
 }
@@ -1355,22 +1357,21 @@ h1, h2, h3, h4, h5, h6,
 
 /* CTA Section */
 .cta-section {
-    padding: 6rem 0;
+    padding: 1rem 0;
     background: #F6F6FA;
     color: #151581;
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 .cta-blur-spot {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     filter: blur(60px);
-    opacity: 0.25;
-    z-index: 0;
+    opacity: 0.4;
+    z-index: -1;
     pointer-events: none;
-    bottom: 5%;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -1484,7 +1485,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* Medical Images Accordion */
 .medical-images-section {
-    padding: 4rem 0;
+    padding: 1rem 0;
     background: #F6F6FA;
 }
 
@@ -1494,8 +1495,7 @@ h1, h2, h3, h4, h5, h6,
     padding: 2rem;
     box-shadow: none;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0.75rem auto;
 }
 
 .medical-images-subtitle {
@@ -1535,8 +1535,18 @@ h1, h2, h3, h4, h5, h6,
 
 /* Chat Section */
 .chat-section {
-    padding: 4rem 0;
+    padding: 2rem 0 1rem 0;
     background: #F6F6FA;
+}
+
+.chat-section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #151581;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Manrope', sans-serif;
 }
 
 .chat-container {
@@ -1544,7 +1554,9 @@ h1, h2, h3, h4, h5, h6,
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .chat-message {
