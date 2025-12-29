@@ -6,18 +6,7 @@
     <title>ScinCare - Научно обоснованный AI Косметолог</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.cdnfonts.com">
-    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'Gilroy';
-            src: url('https://fonts.cdnfonts.com/s/16009/Gilroy-Regular.woff') format('woff');
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -37,7 +26,10 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="release-badge">Скоро выходит в релиз</div>
+                <div class="release-badge">
+                    <img src="img/Icon1.png" alt="Icon" class="release-icon">
+                    Скоро выходит в релиз
+                </div>
                 <h1 class="hero-title">
                     <span class="highlight">AI косметолог</span><br>сфокусирован на вас
                 </h1>
@@ -92,11 +84,11 @@
     <section class="description-section">
         <div class="container">
             <p class="description-text">
-                Установите свои цели и создайте<br>
-                идеальный уход за кожей,<br>
-                отслеживайте изменения с помощью<br>
-                сканера лица, проверяйте<br>
-                безопасность косметики.
+                <img src="img/Icon5.png" alt="Icon" class="description-icon"> Установите свои цели и создайте<br>
+                идеальный уход за кожей <img src="img/Icon6.png" alt="Icon" class="description-icon">,<br>
+                <img src="img/Icon2.png" alt="Icon" class="description-icon"> отслеживайте изменения с помощью<br>
+                сканера лица <img src="img/Icon3.png" alt="Icon" class="description-icon">, проверяйте<br>
+                <img src="img/Icon4.png" alt="Icon" class="description-icon"> безопасность косметики <img src="img/Icon7.png" alt="Icon" class="description-icon">.
             </p>
             <div class="screens-wrapper">
                 <div class="screens-container">
@@ -164,7 +156,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="skin-issues-count">Исследуй свою кожу на наличие<br>11+ проблем</div>
+                    <div class="skin-issues-count">Исследуй свою кожу<br>на наличие 11+ проблем</div>
                 </div>
                 <div class="feature-card">
                     <div class="image-container">
@@ -179,10 +171,13 @@
     <!-- Medical Board Images -->
     <section class="medical-images-section">
         <div class="container">
-            <div class="medical-images-accordion">
-                <img src="img/Med1.png" alt="Med1" class="medical-image">
-                <img src="img/Med2.png" alt="Med2" class="medical-image">
-                <img src="img/Med3.png" alt="Med3" class="medical-image">
+            <div class="medical-images-wrapper">
+                <div class="medical-images-accordion">
+                    <img src="img/Med1.png" alt="Med1" class="medical-image">
+                    <img src="img/Med2.png" alt="Med2" class="medical-image">
+                    <img src="img/Med3.png" alt="Med3" class="medical-image">
+                </div>
+                <p class="medical-images-subtitle">Сканируйте банки и этикетки средств,<br>чтобы проверить качество и состав</p>
             </div>
         </div>
     </section>
@@ -190,37 +185,43 @@
     <!-- Superpower #2: Cosmetics Scanner -->
     <section class="feature-section alt">
         <div class="container">
-            <div class="cosmetics-features">
-                <div class="cosmetic-card single-card">
-                    <div class="cosmetic-images-row">
-                        <div class="cosmetic-image-wrapper">
-                            <img src="img/Cosm3.png" alt="Cosm3" class="cosmetic-image">
-                            <div class="cosmetic-label label-orange">Лучший рейтинг</div>
+            <div class="cosmetics-row">
+                <div class="cosmetics-wrapper">
+                    <div class="cosmetic-card single-card">
+                        <div class="cosmetic-images-row">
+                            <div class="cosmetic-image-wrapper">
+                                <img src="img/Cosm3.png" alt="Cosm3" class="cosmetic-image">
+                                <div class="cosmetic-label label-orange">Лучший рейтинг</div>
+                            </div>
+                            <div class="cosmetic-image-wrapper">
+                                <img src="img/Cosm2.png" alt="Cosm2" class="cosmetic-image">
+                                <div class="cosmetic-label label-blue">Лучшая цена</div>
+                            </div>
+                            <div class="cosmetic-image-wrapper">
+                                <img src="img/Cosm1.png" alt="Cosm1" class="cosmetic-image">
+                                <div class="cosmetic-label label-green">Выбор эксперта</div>
+                            </div>
                         </div>
-                        <div class="cosmetic-image-wrapper">
-                            <img src="img/Cosm2.png" alt="Cosm2" class="cosmetic-image">
-                            <div class="cosmetic-label label-blue">Лучшая цена</div>
-                        </div>
-                        <div class="cosmetic-image-wrapper">
-                            <img src="img/Cosm1.png" alt="Cosm1" class="cosmetic-image">
-                            <div class="cosmetic-label label-green">Выбор эксперта</div>
-                        </div>
+                        <div class="cosmetic-section-title">Подбирайте космические средства</div>
                     </div>
                 </div>
-                <div class="cosmetic-card single-card">
-                    <div class="cosmetic-images-row">
-                        <div class="cosmetic-image-wrapper">
-                            <img src="img/Fruit3.png" alt="Fruit3" class="cosmetic-image fruit-image">
-                            <div class="cosmetic-label label-orange">Витамины D, K</div>
+                <div class="cosmetics-wrapper">
+                    <div class="cosmetic-card single-card">
+                        <div class="cosmetic-images-row">
+                            <div class="cosmetic-image-wrapper">
+                                <img src="img/Fruit3.png" alt="Fruit3" class="cosmetic-image fruit-image">
+                                <div class="cosmetic-label label-orange">Витамины D, K</div>
+                            </div>
+                            <div class="cosmetic-image-wrapper">
+                                <img src="img/Fruit2.png" alt="Fruit2" class="cosmetic-image fruit-image">
+                                <div class="cosmetic-label label-blue">Витамины группы B</div>
+                            </div>
+                            <div class="cosmetic-image-wrapper">
+                                <img src="img/Fruit1.png" alt="Fruit1" class="cosmetic-image fruit-image">
+                                <div class="cosmetic-label label-green">Витамины A, C, E</div>
+                            </div>
                         </div>
-                        <div class="cosmetic-image-wrapper">
-                            <img src="img/Fruit2.png" alt="Fruit2" class="cosmetic-image fruit-image">
-                            <div class="cosmetic-label label-blue">Витамины группы B</div>
-                        </div>
-                        <div class="cosmetic-image-wrapper">
-                            <img src="img/Fruit1.png" alt="Fruit1" class="cosmetic-image fruit-image">
-                            <div class="cosmetic-label label-green">Витамины A, C, E</div>
-                        </div>
+                        <div class="cosmetic-section-title">Подбирайте продукты питания</div>
                     </div>
                 </div>
             </div>
@@ -245,6 +246,8 @@
                         <p>Как ваша кожа чувствует себя сегодня?</p>
                         <div class="slider-container">
                             <div class="slider-track">
+                                <div class="slider-dot slider-dot-start"></div>
+                                <div class="slider-dot slider-dot-middle"></div>
                                 <div class="slider-handle"></div>
                             </div>
                             <div class="slider-labels">
@@ -359,22 +362,11 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Следите за нами</h4>
-                    <div class="social-links">
-                        <a href="#">Medium</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">TikTok</a>
-                        <a href="#">LinkedIn</a>
-                    </div>
-                </div>
-                <div class="footer-section">
                     <h4>Правовая информация</h4>
                     <ul>
                         <li><a href="#">Политика конфиденциальности</a></li>
                         <li><a href="#">Условия использования</a></li>
-                        <li><a href="#">Политика возврата средств</a></li>
                     </ul>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; line-height: 1.5;">ООО "ДТ" в рамках деятельности в области информационных технологий использует следующие языки и средства программирования: Golang, Python, .NET, C++</p>
                 </div>
                 <div class="footer-section">
                     <p>&copy; 2025 ScinCare</p>
