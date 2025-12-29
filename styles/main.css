@@ -229,6 +229,7 @@ body {
     width: 65%;
     height: auto;
     display: block;
+    border-radius: 16px;
 }
 
 .hero-image-2 {
@@ -1358,6 +1359,34 @@ h1, h2, h3, h4, h5, h6,
     background: #F6F6FA;
     color: #151581;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-blur-spot {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.25;
+    z-index: 0;
+    pointer-events: none;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cta-blur-spot-purple {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #d8b4fe, #a855f7);
+    margin-left: -150px;
+}
+
+.cta-blur-spot-pink {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #f9a8d4, #ec4899);
+    margin-left: 150px;
 }
 
 
