@@ -1,7 +1,10 @@
 // FAQ Toggle
 document.querySelectorAll('.faq-item').forEach(item => {
-    const question = item.querySelector('.faq-question');
-    question.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
+        // Don't toggle if clicking inside the answer
+        if (e.target.closest('.faq-answer')) {
+            return;
+        }
         const isActive = item.classList.contains('active');
         document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
         if (!isActive) {
