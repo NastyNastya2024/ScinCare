@@ -13,11 +13,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #151581;
     line-height: 1.6;
     overflow-x: hidden;
@@ -168,6 +168,7 @@ body {
 }
 
 .hero-title {
+    font-family: 'Soyuz Grotesk Bold', sans-serif !important;
     font-size: 2.8rem;
     font-weight: 800;
     line-height: 1.2;
@@ -512,25 +513,43 @@ body {
 
 /* Description Section */
 .description-section {
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .description-text {
+    font-family: 'Gilroy', sans-serif !important;
     font-size: 2.2rem;
     color: #151581;
     line-height: 1.09;
     max-width: 800px;
     text-align: center;
-    margin: 4rem auto;
+    margin-top: 2rem;
+    margin-bottom: 6rem !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0;
+    display: block;
 }
 
 .screens-title {
+    font-family: 'Gilroy', sans-serif;
     font-size: 1.5rem;
     color: #151581;
     text-align: center;
-    margin: 5rem auto 0;
+    margin: 2rem auto 0;
     max-width: 800px;
     line-height: 1.2;
+}
+
+.screens-wrapper {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 9rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .screens-container {
@@ -538,7 +557,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     gap: 0;
-    margin-top: 3rem;
+    margin-top: 0;
     position: relative;
 }
 
@@ -631,6 +650,20 @@ body {
     margin-bottom: 1rem;
 }
 
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.feature-number,
+.feature-card h4,
+.cosmetic-card h4,
+.ingredient-safety h4,
+.ai-badge h4,
+.member-card h4,
+.footer-section h4,
+.product-card h4,
+.hero-title {
+    font-family: 'Gilroy', sans-serif;
+}
+
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -691,6 +724,23 @@ body {
     gap: 2rem;
 }
 
+.skin-issues-count {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #151581;
+    margin-top: 1rem;
+}
+
+.skin-tracking-text {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #151581;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
 .skin-tags-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -726,30 +776,52 @@ body {
     font-weight: 500;
     text-align: center;
     white-space: nowrap;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .tag-blue .tag-text {
-    color: #3b82f6;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .tag-pink .tag-text {
-    color: #ec4899;
+    background: linear-gradient(135deg, #ec4899, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .tag-orange .tag-text {
-    color: #f97316;
+    background: linear-gradient(135deg, #f97316, #fb923c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .tag-green .tag-text {
-    color: #10b981;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .tag-light-green .tag-text {
-    color: #34d399;
+    background: linear-gradient(135deg, #34d399, #6ee7b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .tag-yellow .tag-text {
-    color: #fbbf24;
+    background: linear-gradient(135deg, #fbbf24, #fcd34d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .tag-circle {
@@ -768,6 +840,13 @@ body {
     filter: drop-shadow(0 0 1px currentColor) drop-shadow(0 0 2px currentColor);
     mask-image: radial-gradient(ellipse 90% 90% at center, black 100%, transparent 100%);
     -webkit-mask-image: radial-gradient(ellipse 90% 90% at center, black 100%, transparent 100%);
+}
+
+.tag-icon-image {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .circle-blue {
