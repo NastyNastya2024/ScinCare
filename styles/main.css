@@ -580,7 +580,7 @@ body {
 
 .description-text {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #151581;
     line-height: 1.09;
@@ -605,6 +605,7 @@ body {
 .screens-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
+    font-weight: 600;
     color: #151581;
     text-align: center;
     margin: 4rem auto 1rem auto;
@@ -1505,6 +1506,36 @@ h1, h2, h3, h4, h5, h6,
     z-index: 1;
 }
 
+.cta-button-wrapper {
+    position: relative;
+}
+
+.cta-button-blur {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
+    bottom: -30px;
+}
+
+.cta-button-blur-purple {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #d8b4fe, #a855f7);
+    left: 50%;
+    transform: translateX(-60%);
+}
+
+.cta-button-blur-pink {
+    width: 130px;
+    height: 130px;
+    background: linear-gradient(135deg, #f9a8d4, #ec4899);
+    left: 50%;
+    transform: translateX(-40%);
+}
+
 .cta-section .btn-primary,
 .cta-section .btn-secondary {
     background: white;
@@ -1512,6 +1543,8 @@ h1, h2, h3, h4, h5, h6,
     border: 1px solid #e5e7eb;
     padding: 2rem 4rem;
     font-size: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .cta-section .btn-secondary {
@@ -1563,20 +1596,352 @@ h1, h2, h3, h4, h5, h6,
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding: 0.75rem 0;
     }
 
     .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a.btn-primary {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 2rem;
+    }
+
+    .hero-content {
+        margin-bottom: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-24-7 {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-visual {
+        margin-top: 0;
+    }
+
+    .hero-image {
+        max-width: 85%;
+        width: 85%;
+    }
+
+    .hero-image-2 {
+        top: 80px;
+    }
+
+    .product-image {
+        max-width: 25%;
+        width: 25%;
+    }
+
+    .preloader-overlay,
+    .skin-status-text,
+    .recommendation-text {
+        top: 30%;
+        font-size: 0.85rem;
+    }
+
+    .preloader-text {
+        font-size: 0.85rem;
+    }
+
+    .preloader-spinner {
+        width: 50px;
+        height: 3px;
+    }
+
+    .skin-badge {
+        padding: 0.75rem 1.25rem;
+        border-radius: 30px;
+    }
+
+    .badge-title {
+        font-size: 0.85rem;
+    }
+
+    .badge-value {
+        font-size: 0.75rem;
+        padding: 0.35rem 1rem;
+    }
+
+    .badge-1 {
+        top: 10%;
+        left: 5%;
+    }
+
+    .badge-2 {
+        bottom: 30%;
+        left: 5%;
+    }
+
+    .badge-3 {
+        top: 15%;
+        right: 5%;
+    }
+
+    .arrow {
         display: none;
     }
 
+    /* Description Section */
+    .description-text {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .description-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .screens-wrapper {
+        padding: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .screens-title {
+        font-size: 1.2rem;
+        margin: 2rem auto 0.75rem auto;
+    }
+
+    .screen-left,
+    .screen-right {
+        width: 100px;
+    }
+
+    .screen-center {
+        width: 120px;
+    }
+
+    /* Feature Sections */
     .section-title {
+        font-size: 1.75rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 0.625rem;
+        margin-top: 1rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .skin-issues-count {
+        font-size: 1rem;
+    }
+
+    .skin-tracking-text {
+        font-size: 1rem;
+    }
+
+    /* Medical Images */
+    .medical-images-wrapper {
+        padding: 1.5rem;
+    }
+
+    .medical-images-subtitle {
+        font-size: 1.2rem;
+        margin: 2rem auto;
+    }
+
+    .medical-image {
+        max-width: 100px;
+    }
+
+    /* Cosmetics Section */
+    .cosmetics-row {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .cosmetics-wrapper {
+        max-width: 100%;
+    }
+
+    .cosmetic-section-title {
+        font-size: 1.2rem;
+    }
+
+    /* Chat Section */
+    .chat-section {
+        padding: 1.5rem 0 1rem 0;
+    }
+
+    .chat-section-title {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .chat-bubble {
+        max-width: 85%;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .chat-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* CTA Section */
+    .cta-section .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-section .btn-primary {
+        padding: 1.5rem 3rem;
+        font-size: 0.95rem;
+    }
+
+    /* FAQ Section */
+    .faq-title {
         font-size: 2rem;
     }
 
-    .cosmetics-features {
+    .faq-question {
+        font-size: 1rem;
+    }
+
+    .faq-content {
+        gap: 2rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-content {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 1.5rem;
+    }
+
+    .hero-content {
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-24-7 {
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-visual {
+        margin-top: 0;
+    }
+
+    .hero-image {
+        max-width: 95%;
+        width: 95%;
+    }
+
+    .hero-image-2 {
+        top: 60px;
+    }
+
+    .product-image {
+        max-width: 30%;
+        width: 30%;
+    }
+
+    .preloader-overlay,
+    .skin-status-text,
+    .recommendation-text {
+        top: 32%;
+        font-size: 0.75rem;
+    }
+
+    .preloader-text {
+        font-size: 0.75rem;
+    }
+
+    .preloader-spinner {
+        width: 40px;
+        height: 2px;
+    }
+
+    .skin-badge {
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+    }
+
+    .badge-title {
+        font-size: 0.75rem;
+    }
+
+    .badge-value {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.75rem;
+    }
+
+    .badge-1 {
+        top: 8%;
+        left: 2%;
+    }
+
+    .badge-2 {
+        bottom: 25%;
+        left: 2%;
+    }
+
+    .badge-3 {
+        top: 12%;
+        right: 2%;
+    }
+
+    .description-text {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .chat-section-title {
+        font-size: 1.25rem;
+    }
+
+    .cta-section .section-title {
+        font-size: 1.25rem;
+    }
+
+    .feature-card {
+        padding: 1rem;
+    }
+
+    .screens-wrapper {
+        padding: 1rem;
     }
 }
 
