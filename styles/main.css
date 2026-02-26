@@ -1892,6 +1892,7 @@ h1, h2, h3, h4, h5, h6,
 
     .medical-image:nth-child(2) {
         transform: translateY(0);
+        max-width: 75px;
     }
 
     .medical-image:nth-child(3) {
